@@ -34,13 +34,7 @@ public class MasterListFragment extends Fragment {
     // TODO (1) Define a new interface OnImageClickListener that triggers a callback in the host activity
         // The callback is a method named onImageSelected(int position) that contains information about
         // which position on the grid of images a user has clicked
-
-    // TODO (2) Override onAttach to make sure that the container activity has implemented the callback
-
-
-    // Mandatory empty constructor
-    public MasterListFragment() {
-    }
+    OnImageClickListener mCallback;
 
     // Inflates the GridView of all AndroidMe images
     @Override
@@ -50,7 +44,7 @@ public class MasterListFragment extends Fragment {
         final View rootView = inflater.inflate(R.layout.fragment_master_list, container, false);
 
         // Get a reference to the GridView in the fragment_master_list xml layout file
-        GridView gridView = (GridView) rootView.findViewById(R.id.images_grid_view);
+        GridView gridView = rootView.findViewById(R.id.images_grid_view);
 
         // Create the adapter
         // This adapter takes in the context and an ArrayList of ALL the image resources to display
@@ -63,6 +57,17 @@ public class MasterListFragment extends Fragment {
 
         // Return the root view
         return rootView;
+    }
+
+    // TODO (2) Override onAttach to make sure that the container activity has implemented the callback
+
+
+    // Mandatory empty constructor
+    public MasterListFragment() {
+    }
+
+    public interface OnImageClickListener {
+        void onImageSelected(int position);
     }
 
 }
