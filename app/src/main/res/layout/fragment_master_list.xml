@@ -10,10 +10,18 @@
  See the License for the specific language governing permissions and
  limitations under the License.-->
 
-<!-- Display the static master list fragment -->
-<fragment
+<!-- GridView that displays AndroidMe images -->
+<GridView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/master_list_fragment"
-    android:name="com.example.android.android_me.ui.MasterListFragment"
+    android:id="@+id/images_grid_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="wrap_content"
+    android:adjustViewBounds="true"
+    android:columnWidth="180dp"
+    android:gravity="center"
+    android:horizontalSpacing="8dp"
+    android:numColumns="3"
+    android:padding="16dp"
+    android:stretchMode="columnWidth"
+    android:verticalSpacing="8dp">
+</GridView>

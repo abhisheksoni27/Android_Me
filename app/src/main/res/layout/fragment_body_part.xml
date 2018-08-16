@@ -10,10 +10,11 @@
  See the License for the specific language governing permissions and
  limitations under the License.-->
 
-<!-- Display the static master list fragment -->
-<fragment
+<!-- This fragment layout displays just one image of an Android-Me body part -->
+<ImageView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/master_list_fragment"
-    android:name="com.example.android.android_me.ui.MasterListFragment"
+    android:id="@+id/body_part_image_view"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent">
+
+</ImageView>
