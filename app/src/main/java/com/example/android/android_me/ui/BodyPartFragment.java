@@ -26,19 +26,19 @@ import android.widget.ImageView;
 
 import com.example.android.android_me.R;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class BodyPartFragment extends Fragment {
 
     private static final String TAG = "BodyPartFragment";
     private int mListIndex;
-    private ArrayList<Integer> mImageIds;
+    private List<Integer> mImageIds;
 
-    public void setImageId(int id) {
+    public void setListIndex(int id) {
         mListIndex = id;
     }
 
-    public void setImageIds(ArrayList<Integer> imageIds) {
+    public void setImageIds(List<Integer> imageIds) {
         mImageIds = imageIds;
     }
 
